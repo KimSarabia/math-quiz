@@ -4,8 +4,12 @@ function init(){
   var button = document.getElementById('HIIIII');
   button.addEventListener('click', buttonClicked);
 
-document.getElementById('buttons')
-.addEventListener('click', numButtonClicked);
+  document.getElementById('buttons')
+  .addEventListener('click', numButtonClicked);
+
+  //on load?
+  generateRandomNumber();
+
 }
 
 function numButtonClicked(event){
@@ -24,4 +28,14 @@ function buttonClicked(event){
   num++;
   //set the text to the new number
   numberElement.textContent = num;
+}
+
+function generateRandomNumber(event){
+  document.getElementById("leftNum").innerHTML = Math.floor((Math.random() * 10) + 1);
+  document.getElementById("rightNum").innerHTML = Math.floor((Math.random() * 10) + 1);
+}
+
+//ADD
+function showTotal(event){
+
 }
