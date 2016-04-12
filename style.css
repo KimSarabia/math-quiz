@@ -1,0 +1,12 @@
+body{
+  background-color: yellow;
+}
+
+h1 {
+  border: 5px solid #000000;
+}
+
+#number{
+  font-size: 300%;
+  padding-left:30px;
+}
