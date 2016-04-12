@@ -9,6 +9,7 @@ function init(){
 
   //on load?
   generateRandomNumber();
+  getTotal();
 
 }
 
@@ -36,6 +37,18 @@ function generateRandomNumber(event){
 }
 
 //ADD
-function showTotal(event){
+function getTotal(event){
+  var leftNumberElement = document.getElementById('leftNum');
+  var rightNumberElement = document.getElementById('rightNum');
+  //figure out what number is inside
+  var leftNumString = leftNumberElement.textContent;
+  var rightNumString = rightNumberElement.textContent;
 
+  var left = parseInt(leftNumString);
+  var right = parseInt(rightNumString);
+  //add one to that number
+  total = left + right;
+  //set the text to the new number
+
+  console.log('The total is:',total);
 }
