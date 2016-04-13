@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', init);
-
+var finalAns;
 function init(){
   var button = document.getElementById('HIIIII');
   button.addEventListener('click', buttonClicked);
@@ -9,6 +9,9 @@ function init(){
   var submission = document.getElementById('submitButton');
   submission.addEventListener('click', submitButt);
   getTotal();
+  var clearing = document.getElementById('clearButton');
+  clearing.addEventListener('click', clearButt);
+
 }
 
 function numButtonClicked(event){
@@ -71,4 +74,10 @@ function getTotal(event){
   total = left + right;
   //set the text to the new number
   console.log('The total is:',total);
+}
+//We need to clear the final ans to none
+function clearButt(event){
+  document.getElementById("userAnswer").innerHTML = "";
+  document.getElementById("result").innerHTML = "";
+
 }
