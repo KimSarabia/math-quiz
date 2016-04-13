@@ -1,4 +1,4 @@
-# Beer Digest
+# Adding Bee
 
 This is a Vanilla JavaScript Single-Page App with the following features:
 
@@ -9,3 +9,4 @@ This is a Vanilla JavaScript Single-Page App with the following features:
 
 
 ### Demo
+[Play Now!](http://kimsarabia.github.io/math-quiz/)
