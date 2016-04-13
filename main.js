@@ -3,16 +3,12 @@ document.addEventListener('DOMContentLoaded', init);
 function init(){
   var button = document.getElementById('HIIIII');
   button.addEventListener('click', buttonClicked);
-
   document.getElementById('buttons')
   .addEventListener('click', numButtonClicked);
-
-  //on load?
   generateRandomNumber();
+  var submission = document.getElementById('submitButton');
+  submission.addEventListener('click', submitButt);
   getTotal();
-  compareTotal();
-
-
 }
 
 function numButtonClicked(event){
@@ -22,6 +18,8 @@ function numButtonClicked(event){
     console.log(event.target.textContent);
       userAns.textContent += event.target.textContent;
     }
+    finalAns = userAns.textContent;
+    console.log('finalAns:',finalAns);
 }
 
 
@@ -42,6 +40,23 @@ function generateRandomNumber(event){
   document.getElementById("rightNum").innerHTML = Math.floor((Math.random() * 10) + 1);
 }
 
+//COMPARE USER ANS WITH TOTAL
+//RETURN TRUE OR FALSE
+//IF TRUE - render CORRECT
+//IF FALSE - render INCORRECT
+function submitButt(event){
+  console.log('Correct! OR Incorrect!');
+  console.log(total);
+  console.log('yo:',finalAns);
+  if(total == finalAns){
+    console.log('Correct');
+    document.getElementById("result").innerHTML = "You got it!";
+  } else{
+    console.log('Incorrect');
+    document.getElementById("result").innerHTML = "Oops! Try Again.";
+  }
+
+}
 //ADD
 function getTotal(event){
   var leftNumberElement = document.getElementById('leftNum');
@@ -56,12 +71,4 @@ function getTotal(event){
   total = left + right;
   //set the text to the new number
   console.log('The total is:',total);
-}
-
-
-
-
-function compareTotal(event){
-  console.log('Right or Wrong');
-
 }
