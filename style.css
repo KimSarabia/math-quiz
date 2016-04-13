@@ -16,6 +16,7 @@ body{
 }
 
 h1 {
+  font-size: 3.5em;
   border: 5px solid #000000;
   text-align: center;
 }
@@ -41,16 +42,27 @@ button{
 
 }
 
-#userAnswer{
- font-size: 6em;
- text-align: center;
+#buttons{
+  display:block;
+}
 
+#userAnswer{
+  display:block;
+  width:100%;
+  height:70px;
+  font-size: 6em;
+  text-align: center;
+  /*overflow:scroll;*/
 }
 
 #leftNum{
  font-size: 6em;
  text-align: center;
+}
 
+#plusSign{
+ font-size: 6em;
+ text-align: left;
 }
 
 #rightNum{
@@ -102,14 +114,14 @@ hr {
   text-align: center;
 
 }
+/*Bee Animation by jonitrythall http://codepen.io/jonitrythall/pen/AEhxd*/
 
-/*bee*/
-/*body {
-  background-color: #c4edf7;
-}*/
-
+.contain{
+  margin-right: 100px
+}
 .bee {
   position: absolute;
+  margin:10px -150px;
   top: 150px;
   left: 270px;
   -webkit-transform: rotate(40deg);
@@ -252,21 +264,6 @@ hr {
   top: 193px;
   z-index: -1;
   left: 55px;
-}
-
-.trail {
-  width: 6px;
-  height: 350px;
-  border-left: 4px dashed gray;
-  position: absolute;
-  opacity: .30;
-  top: 305px;
-  left: 151px;
-  z-index: -2;
-  -webkit-transform: rotate(40deg);
-  transform: rotate(40deg);
-  -webkit-animation: trail 6s;
-  animation: trail 6s;
 }
 
 .talk {
