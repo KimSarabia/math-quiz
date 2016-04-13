@@ -10,14 +10,20 @@ function init(){
   //on load?
   generateRandomNumber();
   getTotal();
+  compareTotal();
+
 
 }
 
 function numButtonClicked(event){
+  console.log('numbuttclicked!')
+  var userAns = document.getElementById('userAnswer')
   if(event.target.matches('button')){
     console.log(event.target.textContent);
-  }
+      userAns.textContent += event.target.textContent;
+    }
 }
+
 
 function buttonClicked(event){
   //get that number element
@@ -49,6 +55,13 @@ function getTotal(event){
   //add one to that number
   total = left + right;
   //set the text to the new number
-
   console.log('The total is:',total);
+}
+
+
+
+
+function compareTotal(event){
+  console.log('Right or Wrong');
+
 }
